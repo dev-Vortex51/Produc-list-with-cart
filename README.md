@@ -49,8 +49,6 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 - -[TypeScript](https://www.typescriptlang.org/)
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 Using styled-components and global styles helped me maintain consistency across the project by defining reusable CSS variables in the :root selector. This approach made it easy to manage colors, fonts, and other styling properties throughout the application. For example, I structured my global styles as follows:
