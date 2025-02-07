@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Products, useProduct } from "../contexts/AppContext";
 import { formatCurrency } from "../Utils/helper";
 
+import Remove from "../../public/icon-remove-item.svg";
+
 interface CartItemProps {
   item: Products;
 }
@@ -79,7 +81,7 @@ const CartItem = ({ item }: CartItemProps) => {
         </Pricing>
       </LeftDiv>
       <Span onClick={() => handleRemoveProduct(item.id)}>
-        <img src="/public/icon-remove-item.svg" alt="" />
+        <img src={Remove} alt="" />
       </Span>
     </StyledCartItem>
   );
