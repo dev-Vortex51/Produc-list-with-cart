@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { Products, useProduct } from "../contexts/AppContext";
 import Button from "../Ui/Button";
+import AddToCart from "../../public/icon-add-to-cart.svg";
+import Increase from "../../public/icon-increment-quantity.svg";
+import Decrease from "../../public/icon-decrement-quantity.svg";
 
 import { formatCurrency } from "../Utils/helper";
 
@@ -176,7 +179,7 @@ const Product = ({ dessert }: ProductProps) => {
         {dessert.quantity === 0 ? (
           <Absolute>
             <Button onClick={() => handleAddToCart(dessert.id)}>
-              <Img src="/public/icon-add-to-cart.svg" alt="" />
+              <Img src={AddToCart} alt="" />
               Add to cart
             </Button>
           </Absolute>
@@ -184,11 +187,11 @@ const Product = ({ dessert }: ProductProps) => {
           <Absolute>
             <Button variation="secondary" size="small" flex="between">
               <Span onClick={() => handleDecrease(dessert.id)}>
-                <ImgAction src="/public/icon-decrement-quantity.svg" alt="" />
+                <ImgAction src={Decrease} alt="" />
               </Span>
               <span>{dessert.quantity}</span>
               <Span onClick={() => handleIncrease(dessert.id)}>
-                <ImgAction src="/public/icon-increment-quantity.svg" alt="" />
+                <ImgAction src={Increase} alt="" />
               </Span>
             </Button>
           </Absolute>

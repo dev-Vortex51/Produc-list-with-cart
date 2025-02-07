@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useProduct } from "../contexts/AppContext";
 import { formatCurrency } from "../Utils/helper";
 import Button from "../Ui/Button";
-
+import Confirmed from "../../public/icon-order-confirmed.svg";
 interface ShowCaseProps {
   cartLength: number;
 }
@@ -260,7 +260,7 @@ const Modal = () => {
   return (
     <StyledModal>
       <SpanImage>
-        <img src="/public/icon-order-confirmed.svg" alt="" />
+        <img src={Confirmed} alt="" />
       </SpanImage>
 
       <H2>Order Confirmed</H2>

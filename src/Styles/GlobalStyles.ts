@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-
+import RedHatBold from "../../public/RedHatText-Bold.ttf";
+import RedHatRegular from "../../public/RedHatText-Regular.ttf";
+import RedHatSemiBold from "../../public/RedHatText-SemiBold.ttf";
 const GlobalStyles = createGlobalStyle`
 
 :root {
@@ -20,22 +22,22 @@ const GlobalStyles = createGlobalStyle`
 
 @font-face {
   font-family: "Red Hat Text";
-  src: url(/RedHatText-Bold.ttf) format("truetype"),
-    url(/RedHatText-Bold.ttf) format("truetype");
+  src: url(${RedHatBold}) format("truetype"),
+    url(${RedHatBold}) format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Red Hat Text";
-  src: url(/RedHatText-Regular.ttf) format("truetype"),
-    url(/RedHatText-Regular.ttf) format("truetype");
+  src: url(${RedHatRegular}) format("truetype"),
+    url(${RedHatRegular}) format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Red Hat Text";
-  src: url(/RedHatText-SemiBold.ttf) format("truetype"),
-    url(/RedHatText-SemiBold.ttf) format("truetype");
+  src: url(${RedHatSemiBold}) format("truetype"),
+    url(${RedHatSemiBold}) format("truetype");
   font-weight: 600;
 }
 

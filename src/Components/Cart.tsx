@@ -3,7 +3,8 @@ import { useProduct } from "../contexts/AppContext";
 import CartItem from "./CartItem";
 import { formatCurrency } from "../Utils/helper";
 import Button from "../Ui/Button";
-
+import CartEmpty from "../../public/illustration-empty-cart.svg";
+import CarbonNeutral from "../../public/icon-carbon-neutral.svg";
 const StyledCart = styled.div`
   background-color: white;
   padding: 1.5rem 0.9rem;
@@ -107,7 +108,7 @@ const Cart = () => {
       {cart.length === 0 ? (
         <div>
           <Image>
-            <img src="/public/illustration-empty-cart.svg" alt="" />
+            <img src={CartEmpty} alt="" />
           </Image>
           <P>Your added items will appear here</P>
         </div>
@@ -129,7 +130,7 @@ const Cart = () => {
           </TotalDiv>
           <Carbon>
             <span>
-              <img src="/public/icon-carbon-neutral.svg" alt="" />
+              <img src={CarbonNeutral} alt="" />
             </span>
             <CarbonP>
               This is a <CarbonSpan>carbon-neutral</CarbonSpan> delivery
